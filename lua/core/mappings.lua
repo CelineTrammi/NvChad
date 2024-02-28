@@ -35,8 +35,8 @@ M.general = {
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
     -- windows
-    ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
-    ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
+    ["<leader>v"] = {"<C-w>v", "Split window vertically"},
+    ["<leader>h"] = {"<C-w>s", "Split window horizontally"},
 
     -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
     -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
