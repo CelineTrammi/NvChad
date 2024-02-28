@@ -33,6 +33,10 @@ M.general = {
     ["<leader>n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
+    -- windows
+    ["<leader>sv"] = {"<C-w>v", "Split window vertically"},
+    ["<leader>sh"] = {"<C-w>s", "Split window horizontally"},
+
     -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
     -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
     -- empty mode is same as using <cmd> :map
@@ -61,8 +65,8 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
-    ["<"] = { "<gv", "Indent line" },
-    [">"] = { ">gv", "Indent line" },
+    ["<"] = { "<gv", "Indent line, and keep visual mode" },
+    [">"] = { ">gv", "Indent line, and keep visual mode" },
   },
 
   x = {
