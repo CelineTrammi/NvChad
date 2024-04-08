@@ -5,6 +5,7 @@ local M = {}
 M.general = {
   i = {
     -- go to  beginning and end
+    ["jk"] = {"<ESC>", "Map jk to escape"},
     ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
     ["<C-e>"] = { "<End>", "End of line" },
 
@@ -16,6 +17,7 @@ M.general = {
   },
 
   n = {
+    [";"] = {":", "Mapping semi-colon to colon"},
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
 
     -- switch between windows
@@ -300,7 +302,7 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<A-i>"] = {
+    ["<C-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
@@ -324,7 +326,7 @@ M.nvterm = {
 
   n = {
     -- toggle in normal mode
-    ["<A-i>"] = {
+    ["<leader>i"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,

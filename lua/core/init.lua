@@ -7,6 +7,7 @@ g.nvchad_theme = config.ui.theme
 g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
+g.have_nerd_font = true
 
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
@@ -29,6 +30,7 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
 opt.ruler = false
 
@@ -48,6 +50,9 @@ opt.updatetime = 250
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
+
+-- Minimal number of screen lines to keep above and below cursor
+opt.scrolloff = 10
 
 g.mapleader = " "
 
